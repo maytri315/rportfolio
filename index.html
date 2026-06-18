@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>RIKYTA A T — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Serif+Display:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="C:\Users\Maytri Shah\Downloads\rikyta-portfolio-magazine\style.css" />
+</head>
+<body>
+
+  <!-- ══ BOOK COVER / INTRO ══ -->
+  <div id="intro-screen" aria-label="Book cover intro">
+    <div class="cover-texture"></div>
+    <div class="cover-spine"></div>
+    <div class="cover-inner">
+      <div class="cover-issue">Portfolio — Issue No. 01</div>
+      <div class="cover-rule"></div>
+      <h1 class="cover-name">RIKYTA<br><em>A T</em></h1>
+      <div class="cover-rule"></div>
+      <div class="cover-sub">Words that stop the scroll.<br>Design that holds the gaze.</div>
+      <div class="cover-tags">
+        <span>Creative Writer</span>
+        <span>Gold Medalist</span>
+        <span>Published Author</span>
+        <span>Graphic Designer</span>
+      </div>
+      <button id="intro-open-btn" type="button">
+        <span class="btn-open-label">Open Portfolio</span>
+        <span class="btn-open-arrow">→</span>
+      </button>
+    </div>
+    <div class="cover-corner tl">✦</div>
+    <div class="cover-corner tr">✦</div>
+    <div class="cover-corner bl">✦</div>
+    <div class="cover-corner br">✦</div>
+    <div class="cover-pg">Mysuru, India · 2026</div>
+  </div>
+
+  <!-- ══ PAGE-FLIP OVERLAY ══ -->
+  <div id="page-flip-overlay" aria-hidden="true">
+    <div class="flip-front"></div>
+    <div class="flip-back"></div>
+  </div>
+
+  <!-- ══ APP SHELL ══ -->
+  <div id="app-shell" aria-live="polite">
+
+    <!-- Sidebar / Spine Nav -->
+    <aside id="sidebar">
+      <div id="sidebar-logo">
+        <div class="sl-issue">Folio No. 01</div>
+        <div class="sl-name">RIKYTA<br>A T</div>
+      </div>
+      <nav id="section-nav" aria-label="Portfolio sections">
+        <a href="#about"        data-section="about"        class="active">About</a>
+        <a href="#scripts"      data-section="reel">Reel Scripts</a>
+        <a href="#graphic"      data-section="graphic">Graphic Design</a>
+        <a href="#carousels"    data-section="carousels">Carousels</a>
+        <a href="#content"      data-section="content">Content</a>
+        <a href="#more-work"    data-section="morework">More Work</a>
+        <a href="#publications" data-section="publications">Publications</a>
+        <a href="#contact"      data-section="contact">Contact</a>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="sf-dot"></div>
+        <span>Scroll to explore</span>
+      </div>
+    </aside>
+
+    <!-- Stage: background image columns -->
+    <main id="stage">
+      <section id="image-columns" aria-hidden="true">
+        <div class="image-col" id="col-1"><div class="col-inner"></div></div>
+        <div class="image-col" id="col-2"><div class="col-inner"></div></div>
+        <div class="image-col" id="col-3"><div class="col-inner"></div></div>
+      </section>
+
+      <!-- Content pane — shown over blurred bg -->
+      <section id="content-pane" aria-label="Section content">
+        <div class="content-card">
+          <button class="cc-close" id="cc-close-btn" aria-label="Close">✕</button>
+          <div id="section-content"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ══ CARD DIALOG (click-on-card detail) ══ -->
+  <div id="card-dialog" class="card-dialog" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="card-dialog-backdrop" id="card-backdrop"></div>
+    <div class="card-dialog-box" id="card-dialog-box">
+      <button class="card-dialog-close" id="card-dialog-close">Close ✕</button>
+      <div id="card-dialog-content"></div>
+    </div>
+  </div>
+
+  <script src="C:\Users\Maytri Shah\Downloads\rikyta-portfolio-magazine\images.js"></script>
+  <script src="C:\Users\Maytri Shah\Downloads\rikyta-portfolio-magazine\main.js"></script>
+</body>
+</html>
